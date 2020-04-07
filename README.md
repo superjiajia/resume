@@ -1,2 +1,3 @@
-# resume
+## resume
+
 My front-end resume
