@@ -3,8 +3,8 @@ import './index.styl';
 
 function Index() {
   return (
-    <div className="App">
-
+    <div className="container">
+      一个网页简历
     </div>
   );
 }
