@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './index.styl';
 
-function App() {
+function Index() {
   return (
     <div className="App">
 
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;
