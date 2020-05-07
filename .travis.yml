@@ -17,4 +17,4 @@ deploy:
   local-dir: build
   on:
     branch: master
-  github-token: $GITHUB_TOKEN
+  github-token: $GH_TOKEN
