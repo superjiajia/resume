@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Fullpage from './../fullpage/fullpage'
 import './index.styl';
 
-function Index() {
-  return (
-    <div className="container">
-      一个网页简历
-    </div>
-  );
+export default class Index extends Component {
+  render () {
+    return (
+      <div className="container">
+        <Fullpage></Fullpage>
+      </div>
+    )
+  }
 }
-
-export default Index;
