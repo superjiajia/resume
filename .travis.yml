@@ -1,20 +1,39 @@
 language: node_js
-node_js:
-- lts/*
-env:
-  global:
-# 默认是yarn, 如果有yarn.lock的话
+# nodejs版本
+node_js: 
+    - '10'
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
+# S: Build Lifecycle
 install:
-- yarn
-# 默认是 yarn test
+  - yarn
+
+before_script:
+
+# 无其他依赖项所以执行npm run build 构建就行了
 script:
-- yarn build
-cache: yarn
-deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  local-dir: build
-  on:
-    branch: master
-  github-token: $GH_TOKEN
+  - yarn build
+
+after_script:
+  - cd ./build
+  - git init
+  - git config user.name "${U_NAME}"
+  - git config user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Update resume"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# E: Build LifeCycle
+
+#指定分支，只有指定的分支提交时才会运行脚本
+branches:
+  only:
+    - master
+env:
+ global:
+   # 我将其添加到了travis-ci的环境变量中
+   #- GH_REF: github.com/superjiajia/resume.git
