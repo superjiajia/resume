@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+
 import './fullpage.styl'
+
+// import { debounce } from 'common/js/utils.js'
 
 export default class Fullpage extends Component {
   constructor(props) {
@@ -8,25 +11,22 @@ export default class Fullpage extends Component {
       active: 0,
       innerHeight: 0,
     }
+    this.activeIndex = 0
+    this.iHeight = window.innerHeight
     this.scrollPage = this.scrollPage.bind(this)
   }
-  autoScrollPage(h) {
-    let index = 0, height = 0
-    setInterval(_ => {
-      index++
-      if (index >= 4) index = 0
-      height = index * h
-      this.setState({
-        active: index,
-        innerHeight: -height
-      })
-    },5e3)
-  }
   scrollPage(e) {
-    console.warn(e.deltaY > 0 ? 'Down' : 'Up')
-  }
-  componentDidMount() {
-    this.autoScrollPage(window.innerHeight)
+    if (e.deltaY > 0) { // Down
+      this.activeIndex++
+      if (this.activeIndex > 3) this.activeIndex = 0
+    } else { // Up
+      this.activeIndex--
+      if (this.activeIndex < 0) this.activeIndex = 3
+    }
+    this.setState({
+      active: this.activeIndex,
+      innerHeight: -this.activeIndex * this.iHeight
+    })
   }
   render() {
     let { active, innerHeight } = this.state
