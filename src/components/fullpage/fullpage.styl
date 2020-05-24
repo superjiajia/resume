@@ -1,21 +1,88 @@
+li
+  list-style none
+
 .fullpage
   width 100%
   height 100%
-  transition: transform 1.5s ease
+  transition transform 1.5s ease-out
   >.fullpage__item
     width 100%
     height 100%
-    line-height 700px
-    text-align center
-    font-size 48px
-    color #fff
+    background-image url("../../common/images/texture.png")
     &:nth-child(1)
-      background-color #00a862
+      background-color #1661ab
     &:nth-child(2)
-      background-color #039be5
+      background-color #45b787
     &:nth-child(3)
-      background-color #ff4444
+      background-color #813c85
     &:nth-child(4)
-      background-color #ffd600
+      background-color #ab372f
+    >.item__box
+      width 980px
+      padding 10px 0
+      margin 0 auto
+      color #fff
   >.active
     z-index 2
+
+.welcome
+  >h1,>p
+    text-align center
+  >h1
+    font-size 48px
+    margin 80px 0
+  >.fe__info
+    width 480px
+    margin 60px auto 0
+
+.work__experience
+  >h1
+    text-align center
+    margin 40px 0
+.project__experience
+  >h1
+    text-align center
+    margin 40px 0
+  >h3
+    border-left 5px solid #039be5
+    padding-left 10px
+  >p
+    padding-left 25px
+  >i
+    color #999
+
+.base__info
+  >h1
+    margin 40px 0 150px
+  >h1,>p
+    text-align center
+  >ul
+    width 320px
+    margin 0 auto
+    >.info__item
+      line-height 38px
+      background-repeat no-repeat
+      background-size contain
+      padding-left 50px
+      margin 10px 0
+      &:nth-child(1)
+        background-image url("../../common/images/icons/youxiang.png")
+      &:nth-child(2)
+        background-image url("../../common/images/icons/dizhi.png")
+      &:nth-child(3)
+        background-image url("../../common/images/icons/shuye.png")
+      &:nth-child(4)
+        background-image url("../../common/images/icons/wechat.png")
+        position relative
+        &:after
+          display inline-block
+          content ' '
+          width 125px
+          height 125px
+          position absolute
+          left 50px
+          background url("../../common/images/wechat.jpg") no-repeat
+          background-size cover
+          border 5px solid #fff
+          border-radius 6px
+          box-shadow 0 0 6px 2px #333
