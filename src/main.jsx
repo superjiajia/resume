@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from 'components/home/index'
+import App from 'pages/home/index'
 import './main.styl'
 
 ReactDOM.render(

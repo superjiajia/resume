@@ -1,5 +1,7 @@
 li
   list-style none
+a
+  text-decoration none
 
 .fullpage
   width 100%
@@ -9,6 +11,7 @@ li
     width 100%
     height 100%
     background-image url("../../common/images/texture.png")
+    position relative
     &:nth-child(1)
       background-color #1661ab
     &:nth-child(2)
@@ -17,8 +20,10 @@ li
       background-color #813c85
     &:nth-child(4)
       background-color #ab372f
+    &:nth-child(5)
+      background-color #142334
     >.item__box
-      width 980px
+      width 1120px
       padding 10px 0
       margin 0 auto
       color #fff
@@ -32,24 +37,107 @@ li
     font-size 48px
     margin 80px 0
   >.fe__info
-    width 480px
+    width 690px
     margin 60px auto 0
 
 .work__experience
   >h1
     text-align center
     margin 40px 0
+  >.content
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+    >.card
+      width 528px
+      height 210px
+      padding 0 10px
+      background-color #fff
+      border-radius 6px
+      color #333
+      margin-bottom 15px
+      >h2
+        font-size 16px
+      >p
+        font-size 14px
+        margin 0
 .project__experience
   >h1
     text-align center
     margin 40px 0
-  >h3
-    border-left 5px solid #039be5
-    padding-left 10px
-  >p
-    padding-left 25px
-  >i
-    color #999
+  >.content
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+    >.card
+      width 528px
+      height 210px
+      padding 0 10px
+      background-color #fff
+      border-radius 6px
+      color #333
+      margin-bottom 15px
+      >h3
+        padding-left 10px
+        font-size 16px
+        border-left 5px solid #039be5
+      >p
+        margin-top 0
+        font-size 14px
+      >i
+        color #999
+
+.individual__project
+  >h1
+    text-align center
+    margin 40px 0
+  >.content
+    display flex
+    flex-flow row wrap
+    justify-content space-between
+    >.card
+      width 528px
+      height 410px
+      padding 0 10px
+      background-color #fff
+      border-radius 6px
+      color #333
+      margin-bottom 15px
+      >h3
+        padding-left 10px
+        font-size 16px
+        border-left 5px solid #039be5
+      >p
+        margin-top 0
+        font-size 14px
+      >.last_time
+        position relative
+        &:after
+          display inline-block
+          content ' '
+          width 125px
+          height 125px
+          position absolute
+          left 50px
+          background url("../../common/images/last_time_mp_code.jpg") no-repeat
+          background-size cover
+          border 5px solid #fff
+          border-radius 6px
+      >.light_bill
+        position relative
+        &:after
+          display inline-block
+          content ' '
+          width 125px
+          height 125px
+          position absolute
+          left 50px
+          background url("../../common/images/light_bill_mp_code.jpg") no-repeat
+          background-size cover
+          border 5px solid #fff
+          border-radius 6px
+      >i
+        color #999
 
 .base__info
   >h1
@@ -85,4 +173,7 @@ li
           background-size cover
           border 5px solid #fff
           border-radius 6px
-          box-shadow 0 0 6px 2px #333
+footer
+  width 100%
+  position absolute
+  bottom 0px
