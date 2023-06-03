@@ -1,7 +1,42 @@
-## resume
+# Nuxt 3 Minimal Starter
 
-My front-end resume
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-[![Build Status](https://travis-ci.org/jiawang03/resume.svg?branch=master)](https://travis-ci.org/jiawang03/resume)
+## Setup
 
-预览地址：[https://jiawang03.github.io/resume/](https://jiawang03.github.io/resume/)
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
