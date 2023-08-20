@@ -5,7 +5,8 @@
       <div class="item__box welcome">
         <h1>Hey, I'm WangJia.</h1>
         <p>👨‍💻前端届的小学生</p>
-        <p>🙆‍♂️"江山父老能容我，不使人间造孽钱"</p>
+        <p>近8年前端开发经验，2年大型项目架构优化经验</p>
+        <p>以及2年以上带队经验，具有大型项目优化、项目技术难点攻克、项目运维部署、以及 Node.js 服务端等开发经验。</p>
         <div class="fe__info" id="fe__info"></div>
       </div>
     </div>
@@ -68,7 +69,7 @@
               <h3>TurboDesk<span>C端</span></h3>
               <p>项目描述：基于OpenAI GPT3.5及讯飞星火大模型打造AI运营工作台。</p>
               <p>技术栈：Electron、React、Ant Design、markdown-it、axios、Sentry</p>
-              <p>项目地址：<a href="http://turbodesk.cn/" target="_blank">http://turbodesk.cn/</a></p>
+              <p>项目地址：<a href="https://turbodesk.cn/" target="_blank">https://turbodesk.cn/</a></p>
             </div>
             <div class='card'>
               <h3>讯飞AI中台<span>B端</span></h3>
@@ -136,7 +137,6 @@
       <div class="item__box">
         <div class="base__info">
           <h1>✨ - 关于我 - </h1>
-          <p>近8年前端开发经验，2年大型项目架构优化经验，以及2年以上带队经验，具有大型项目优化、项目技术难点攻克、项目运维部署、以及Node.js服务端等开发经验。🎉</p>
           <ul>
             <li class="info__item">wangjia125513819@gmail.com</li>
             <li class="info__item">安徽 合肥</li>
@@ -242,7 +242,7 @@ ResumeOfWangJia();
     .respond('2、熟练使用Electron、微信小程序、uni-app等其他跨平台框架；')
     .respond('3、熟练使用Nuxt.js服务端渲染，以及Node.js、MySQL等平台及语言；')
     .respond('4、了解Linux系统基本命令，及Nginx、Docker等应用的基本使用；')
-    .respond('5、深知代码的健壮性、可扩展性、可维护性，以及丰富的用户体验认知；')
+    .respond('5、熟悉前端性能优化，深知代码的健壮性、可扩展性、可维护性，以及丰富的用户体验认知；')
     .respond('别忘记向下滑动噢👀')
     .end();
 }
@@ -288,6 +288,9 @@ onUnmounted(() => {
       padding 10px 0
       margin 0 auto
       color #fff
+      >p
+        &:first-of-type
+          font-size 20px
   >.active
     z-index 2
 
@@ -410,7 +413,7 @@ onUnmounted(() => {
 
 .base__info
   >h1
-    margin 40px 0 120px
+    margin 40px 0 200px
   >h1,>p
     text-align center
   >p
