@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'content-type', content: 'text/html;charset=utf-8' },
         { ['http-equiv']: 'x-ua-compatible', content: 'ie=edge,chrome=1' },
+        { name: 'keywords', content: 'web前端简历,前端工程师简历,前端开发简历,wangjia的简历,汪佳的简历,Vue开发,React开发,小程序开发,Electron开发' },
         { name: 'description', content: 'web前端简历,前端工程师简历,前端开发简历,Vue开发,React开发,小程序开发,Electron开发' }
       ],
       link: [
